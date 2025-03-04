@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+
+<suite name="MasterSuite">
+  <test thread-count="5" name="chromeTest">
+  <parameter name="os" value="windows"/>
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <!--class name="testcases.tc0011accountrigistration"/-->
+      <class name="testcases.verify_login_Myaccount
+      y_login_DDT"/>   
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

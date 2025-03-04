@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="grouping">
+<groups>
+     <run>
+        <include name="Sanity"/>
+        <include name="Regression"/>
+        <include name="Master"/>
+      </run>
+</groups>
+
+<listeners>
+<listener class-name="Utilities.ExtendManagerUtility"/>
+</listeners>
+  <test thread-count="5" name="groupTest">
+  <parameter name="os" value="windows"/>
+  <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testcases.verify_login_Myaccount"/>
+      <!--class name="testcases.veriy_login_DDT"/-->
+      <class name="testcases.tc0011accountrigistration"/>
+    </classes>
+  </test> <!-- groupTest -->
+</suite> <!-- grouping -->
